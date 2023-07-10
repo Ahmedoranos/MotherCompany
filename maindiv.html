@@ -1,0 +1,653 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" 
+    integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" 
+    crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <!-- <link rel="stylesheet" href="assets/css/styles.css" /> -->
+    <style>
+/*Code for scrolling effect*/
+body {
+  margin: 0;
+}
+.sample-header {
+  position: fixed;
+  left: 0;
+  top: 6rem;
+  width: 100%;
+}
+.sample-header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: white;
+  opacity: 0.3;
+}
+.sample-header-section {
+  position: relative;
+  padding: 1% 0 1%;
+  max-width: 100%;
+margin: 5px;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  border:1px solid rgba(0,0,0,.125);
+
+}
+.give_image
+{
+    background-image: url("https://www.dbsmena.com/wp-content/uploads/Homepagebanner.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.sample-section-wrap {
+  position: relative;
+  background-color: white;
+}
+.sample-section {
+  position: relative;
+  max-width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 40px;
+}
+/*End of scrolling effect*/
+
+header{ 
+  position:relative;
+  width:100%;
+  background:#fff;
+}
+.logo{
+  position:relative;
+  z-index:123;
+  padding:10px;
+  font:18px verdana;
+  color:#000;
+  float:left;
+  width:15%;
+  text-align: center;
+}
+.logo a{color:#2fade2;}
+nav{
+  position:relative;
+  width: 100%;
+  margin:0 auto;
+}
+#pn_menu,#pn_menu ul,#pn_menu ul li,#pn_menu ul li a,#pn_menu #head-mobile
+{
+  border:0;list-style:none;line-height:1;display:block;position:relative;
+  -webkit-box-sizing:border-box;-moz-box-sizing:border-box;
+  box-sizing:border-box;
+}
+#pn_menu:after,#pn_menu > ul:after
+{ content:".";display:block;clear:both;visibility:hidden;line-height:0;height:0;
+}
+#pn_menu #head-mobile{display:none}
+#pn_menu{
+  font-family:sans-serif;
+  background:#fff;
+}
+#pn_menu > ul > li{float:left}
+
+
+
+
+/* a tag style*/
+
+#pn_menu > ul > li > a{
+  padding:17px 50px;
+  font-size:18px;
+  letter-spacing:1px;
+  text-decoration:none;
+  color: #2fade2;
+  font-weight:700;
+}
+
+
+
+
+
+
+
+
+
+#pn_menu > ul > li:hover > a,#pn_menu ul li.active a{color:#fff}
+#pn_menu > ul > li:hover,#pn_menu ul li.active:hover,
+#pn_menu ul li.active,#pn_menu ul li.has-sub.active:hover {
+  background: #2fade2 !important;
+  -webkit-transition:background .3s ease;
+  -ms-transition:background .3s ease;
+  transition:background .3s ease;
+}
+#pn_menu > ul > li.has-sub > a{padding-right:30px}
+/* #pn_menu > ul > li.has-sub > a:after {
+  position:absolute;top:22px;right:11px;width:8px;height:2px;
+  display:block;background:#ddd;content:''
+}
+#pn_menu > ul > li.has-sub > a:before{
+  position:absolute;top:19px;right:14px;display:block;width:2px;
+  height:8px;background:#ddd;content:'';-webkit-transition:all .25s ease;
+  -ms-transition:all .25s ease;transition:all .25s ease
+} */
+#pn_menu > ul > li.has-sub:hover > a:before{top:23px;height:0}
+#pn_menu ul ul{position:absolute;left:-9999px}
+#pn_menu ul ul li{
+  height:0;
+  -webkit-transition:all .25s ease;
+  -ms-transition:all .25s ease;
+  background: #fff;
+  transition:all .25s ease
+}
+#pn_menu ul ul li:hover{}
+#pn_menu li:hover > ul{left:auto}
+#pn_menu li:hover > ul > li{
+  height:auto;
+  /* height:35px  */
+}
+#pn_menu ul ul ul{margin-left:100%;top:0}
+#pn_menu ul ul li a{
+  border-bottom:1px solid rgba(150,150,150,0.15);
+  padding:11px 15px;
+  /* width:170px;  */
+  font-size:12px;
+  text-decoration:none;
+  color: #000;
+  font-weight:400;
+}
+#pn_menu ul ul li:last-child > a,#pn_menu ul ul li.last-item > a{ 
+  border-bottom:0 
+}
+#pn_menu ul ul li:hover > a,#pn_menu ul ul li a:hover 
+{
+  color:#000;
+}
+#pn_menu ul ul li.has-sub > a:after{position:absolute;top:16px;right:11px;width:8px;height:2px;display:block;background:#ddd;content:''}
+#pn_menu ul ul li.has-sub > a:before{position:absolute;top:13px;right:14px;display:block;width:2px;height:8px;background:#ddd;content:'';-webkit-transition:all .25s ease;-ms-transition:all .25s ease;transition:all .25s ease}
+#pn_menu ul ul > li.has-sub:hover > a:before{top:17px;height:0}
+#pn_menu ul ul li.has-sub:hover,#pn_menu ul li.has-sub ul li.has-sub ul li:hover{background:#363636;}
+#pn_menu ul ul ul li.active a{border-left:1px solid #333}
+#pn_menu > ul > li.has-sub > ul > li.active > a,#pn_menu > ul ul > li.has-sub > ul > li.active> a{border-top:1px solid #333}
+
+@media screen and (max-width:1000px){
+.logo{position:absolute;top:0;left: 0;width:100%;height:46px;text-align:center;padding:10px 0 0 0 ;float:none}
+.logo2{display:none}
+nav{width:100%;}
+#pn_menu{width:100%}
+#pn_menu ul{width:100%;display:none}
+#pn_menu ul li{width:100%;border-top:1px solid #9e9e9e42}
+#pn_menu ul li:hover{background:#363636;}
+#pn_menu ul ul li,#pn_menu li:hover > ul > li{height:auto}
+#pn_menu ul li a,#pn_menu ul ul li a{width:100%;border-bottom:0}
+#pn_menu > ul > li{float:none}
+#pn_menu ul ul li a{padding-left:25px}
+#pn_menu ul ul li{background:#333!important;}
+#pn_menu ul ul li:hover{background:#363636!important}
+#pn_menu ul ul ul li a{padding-left:35px}
+#pn_menu ul ul li a{color:#ddd;background:none}
+#pn_menu ul ul li:hover > a,#pn_menu ul ul li.active > a{color:#fff}
+#pn_menu ul ul,#pn_menu ul ul ul{
+  position:relative;left:0;width:100%;margin:0;text-align:left
+}
+#pn_menu > ul > li.has-sub > a:after,#pn_menu > ul > li.has-sub > a:before,#pn_menu ul ul > li.has-sub > a:after,#pn_menu ul ul > li.has-sub > a:before{display:none}
+#pn_menu #head-mobile{display:block;padding:23px;color:#ddd;font-size:12px;font-weight:700}
+.button{width:55px;height:46px;position:absolute;right:0;top:0;cursor:pointer;z-index: 12399994;}
+.button:after{position:absolute;top:22px;right:20px;display:block;height:4px;width:20px;border-top:2px solid #dddddd;border-bottom:2px solid #dddddd;content:''}
+.button:before{-webkit-transition:all .3s ease;-ms-transition:all .3s ease;transition:all .3s ease;position:absolute;top:16px;right:20px;display:block;height:2px;width:20px;background:#ddd;content:''}
+.button.menu-opened:after{-webkit-transition:all .3s ease;-ms-transition:all .3s ease;transition:all .3s ease;top:23px;border:0;height:2px;width:19px;background:#fff;-webkit-transform:rotate(45deg);-moz-transform:rotate(45deg);-ms-transform:rotate(45deg);-o-transform:rotate(45deg);transform:rotate(45deg)}
+.button.menu-opened:before{top:23px;background:#fff;width:19px;-webkit-transform:rotate(-45deg);-moz-transform:rotate(-45deg);-ms-transform:rotate(-45deg);-o-transform:rotate(-45deg);transform:rotate(-45deg)}
+#pn_menu .submenu-button{position:absolute;z-index:99;right:0;top:0;display:block;border-left:1px solid #9e9e9e42;height:46px;width:46px;cursor:pointer}
+#pn_menu .submenu-button.submenu-opened{background:#262626}
+#pn_menu ul ul .submenu-button{height:34px;width:34px}
+#pn_menu .submenu-button:after{position:absolute;top:22px;right:19px;width:8px;height:2px;display:block;background:#9e9e9e42;content:''}
+#pn_menu ul ul .submenu-button:after{top:15px;right:13px}
+#pn_menu .submenu-button.submenu-opened:after{background:#fff}
+#pn_menu .submenu-button:before{position:absolute;top:19px;right:22px;display:block;width:2px;height:8px;background:#9e9e9e42;content:''}
+#pn_menu ul ul .submenu-button:before{top:12px;right:16px}
+#pn_menu .submenu-button.submenu-opened:before{display:none}
+#pn_menu ul ul ul li.active a{border-left:none}
+#pn_menu > ul > li.has-sub > ul > li.active > a,#pn_menu > ul ul > li.has-sub > ul > li.active > a{border-top:none}
+}
+
+
+
+
+/* Social buttons */
+.socials {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  right: 1%;
+  bottom: 50%;
+}
+
+.socicon {
+  width: 2rem;
+  height: 2rem;
+}
+/* Social button ends */
+
+
+/* Projects section */
+
+:root {
+  --font-family: "Roboto", sans-serf;
+  --normal-font: 400;
+  --bold-font: 700;
+  --bolder-font: 900;
+  --bg-color: #fcfcfc;
+  --primary-color: #4756df;
+  --secondary-color: #ff7235;
+  --primary-shadow: #8b8eaf;
+  --secondary-shadow: #a17a69;
+  --bottom-margin: 0.5rem;
+  --bottom-margin-2: 1rem;
+  --line-height: 1.7rem;
+  --transition: 0.3s;
+}
+/* Projects section */
+.projects {
+  background-color: var(--bg-color);
+  padding: 32px 0;
+  margin-top: 2rem;
+}
+
+.project-pic {
+  width: 65%;
+  height: 60%;
+}
+
+.projects-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.projects-title {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.project-container {
+  text-align: center;
+  width: 21.875rem;
+  padding: 1rem;
+}
+
+.project-container p {
+  padding: 0.4rem;
+}
+
+.project-title {
+  margin-bottom: var(--bottom-margin);
+}
+
+.project-details {
+  margin-bottom: var(--bottom-margin);
+}
+
+
+
+.project-card {
+  background-color: #fff;
+  border-radius: 11px;
+  box-shadow: 0 3px 10px var(--primary-shadow);
+  padding: 20px;
+  margin: 10px;
+}
+
+/* Projects section ends */
+
+
+/* Skills section */
+.skills {
+  max-width: 68.75rem;
+  margin: auto;
+  text-align: center;
+  margin-top: 2.5rem;
+}
+
+.skill-header {
+  margin-bottom: 1rem;
+}
+
+.skills-wrapper img {
+  padding: 1.25rem;
+}
+
+.icon {
+  width: 11.875rem;
+  height: 11.25rem;
+}
+.icon-card {
+  background-color: #fff;
+  border-radius: 11px;
+  box-shadow: 0 3px 10px var(--secondary-shadow);
+  padding: 20px;
+  margin: 10px;
+}
+/* Skills section ends */
+
+
+
+
+.giveborder
+{
+    border: ;
+}
+
+
+
+.bootstrap_style_drophead_search {
+    padding: 0.5rem;
+    background-color: white;
+    color: #2fade2;
+    border-color: #2fade2;
+    font-weight: 400;
+    text-align: center;
+    font-size: 1.5rem;
+    border-radius: 20px;
+    border: 1px solid #2fade2;
+}
+
+
+
+.bootstrap_style_drophead_search:hover {
+    padding: 0.5rem;
+    background-color:  #2fade2;
+    color: white;
+    border-color: #2fade2;
+    font-weight: 400;
+    text-align: center;
+    font-size: 1.5rem;
+    border-radius: 20px;
+    border: 1px solid #2fade2;;
+    cursor: pointer;
+}
+
+
+
+
+    </style>
+</head>
+<body>
+
+  <header class="giveborder">
+  <nav id='pn_menu' class="giveborder">
+    <div class="logo giveborder">
+      <a href="/">
+        <h2 style="font-weight: bold;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">PSS MENA</h2>
+<!--         <img src="images/logo.png" alt="" title="" width="100" /> -->
+      </a>
+    </div>
+    <div id="head-mobile"></div>
+    <div class="button"></div>
+    
+    <ul class="main_menu giveborder" style="margin-top: 0.5rem;">
+      <li class='active'><a href='#'>Products</a></li>
+      <li>
+        <a href='#'>Insight</a>
+        <ul>
+          <li>
+            <a href='#'>Consumer spending up; business investment and exports downConsumer spending up; business investment and exports downConsumer spending up; business investment and exports downConsumer spending up; business investment and exports downConsumer spending up; business investment and exports down</a>
+          </li>
+          <!-- <li><a href='#'>Product 2</a>
+                 <ul>
+                    <li><a href='#'>Sub Product</a></li>
+                    <li><a href='#'>Sub Product</a></li>
+                 </ul>
+              </li> -->
+        </ul>
+      </li>
+      <li><a href='#'>Contact</a></li>
+      <li><a href='#'>About</a></li>
+    </ul>
+  </nav>
+</header>
+
+
+    <div class="sample-header">
+        <div class="sample-header-section" style="">
+            <div class="row" style="margin: auto;height: 700px;width: 98%;">
+                   <div class="col pt-5 pl-5 text-center">
+                        <h3 class="mt-5" style="color: #2fade2;font-weight: bold;text-shadow: none;">
+                            All Technology You Need 
+                            <br>
+                            to Push  Your Business Forward
+                        </h3>
+
+                        <button class="bootstrap_style_drophead_search mt-5">
+                            Request Consultation
+                            <!-- <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search-heart" viewBox="0 0 16 16">
+                                <path d="M6.5 4.482c1.664-1.673 5.825 1.254 0 5.018-5.825-3.764-1.664-6.69 0-5.018Z"></path>
+                                <path d="M13 6.5a6.471 6.471 0 0 1-1.258 3.844c.04.03.078.062.115.098l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1.007 1.007 0 0 1-.1-.115h.002A6.5 6.5 0 1 1 13 6.5ZM6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11Z"></path>
+                            </svg> -->
+                            <img src="assets/images/butimage.png" alt="" height="25" width="25" title="">
+                        </button>
+                    </div>
+                   <div class="col give_image">
+        
+                   </div>
+            </div>
+        </div>
+      </div>
+
+
+      <div class="sample-section-wrap">
+        <div class="sample-section">
+
+        <section class="skills" id="skills">
+            <h2 class="skill-header">Our Projects</h2>
+
+            <div class="skills-wrapper">
+            <div class="first-set animate__animated animate__pulse">
+                <img
+                src="assets/images/developement.png"
+                alt=""
+                loading="lazy"
+                class="icon icon-card"
+                />
+                <img
+                src="assets/icons/icons8-css3.svg"
+                alt=""
+                loading="lazy"
+                class="icon icon-card"
+                />
+                <img
+                src="assets/icons/icons8-javascript.svg"
+                alt=""
+                loading="lazy"
+                class="icon icon-card"
+                />
+            </div>
+
+            <div class="second-set animate__animated animate__pulse">
+                <img
+                src="assets/icons/icons8-bootstrap.svg"
+                alt=""
+                loading="lazy"
+                class="icon icon-card"
+                />
+                <img
+                src="assets/icons/icons8-react-native.svg"
+                alt=""
+                loading="lazy"
+                class="icon icon-card"
+                />
+                <a href="https://www.linkedin.com/in/ahmed-elsherif-275357120/">
+                <img
+                src="assets/icons/icons8-git.svg"
+                alt=""
+                loading="lazy"
+                class="icon icon-card"
+                />
+                </a>
+            </div>
+            </div>
+        </section>
+
+  <!-- Projects section -->
+    <section class="projects giveborder" id="projects">
+        <h2 class="projects-title" style="color:">Our Clients</h2>
+        <div class="projects-container">
+        <div class="project-container project-card">
+            <img
+            src="assets/images/client_blacksand.png"
+            alt="expense-tracker"
+            loading="lazy"
+            class="project-pic"
+            />
+            <h3 class="project-title">Expense Tracker</h3>
+            <p class="project-details">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas
+            ratione vel inventore labore commodi modi quos culpa aut saepe!
+            Alias!
+            </p>
+            <a href="#" target="_blank" class="project-link">Check it Out</a>
+        </div>
+        <div class="project-container project-card">
+            <img
+            src="assets/images/client_ecm.png"
+            alt="netflic-clone"
+            loading="lazy"
+            class="project-pic"
+            />
+            <h3 class="project-title">Netflix Clone</h3>
+            <p class="project-details">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas
+            ratione vel inventore labore commodi modi quos culpa aut saepe!
+            Alias!
+            </p>
+            <a href="#" target="_blank" class="project-link">Check it Out</a>
+        </div>
+        <div class="project-container project-card">
+            <img
+            src="assets/images/client_keir.png"
+            alt="greeny-earth"
+            loading="lazy"
+            class="project-pic"
+            />
+            <h3 class="project-title">Greeny Earth</h3>
+            <p class="project-details">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas
+            ratione vel inventore labore commodi modi quos culpa aut saepe!
+            Alias!
+            </p>
+            <a href="#" target="_blank" class="project-link">Check it Out</a>
+        </div>
+        </div>
+    </section>
+    <section class="projects giveborder" id="projects">
+        <h2 class="projects-title" style="color:">Our Clients</h2>
+        <div class="projects-container">
+        <div class="project-container project-card">
+            <img
+            src="assets/images/client_lemon.png"
+            alt="expense-tracker"
+            loading="lazy"
+            class="project-pic"
+            />
+            <h3 class="project-title">Expense Tracker</h3>
+            <p class="project-details">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas
+            ratione vel inventore labore commodi modi quos culpa aut saepe!
+            Alias!
+            </p>
+            <a href="#" target="_blank" class="project-link">Check it Out</a>
+        </div>
+        <div class="project-container project-card">
+            <img
+            src="assets/images/aldawaa-1.png"
+            alt="netflic-clone"
+            loading="lazy"
+            class="project-pic"
+            />
+            <h3 class="project-title">Netflix Clone</h3>
+            <p class="project-details">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas
+            ratione vel inventore labore commodi modi quos culpa aut saepe!
+            Alias!
+            </p>
+            <a href="#" target="_blank" class="project-link">Check it Out</a>
+        </div>
+        <div class="project-container project-card">
+            <img
+            src="assets/images/client_alamal.png"
+            alt="greeny-earth"
+            loading="lazy"
+            class="project-pic"
+            />
+            <h3 class="project-title">Greeny Earth</h3>
+            <p class="project-details">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas
+            ratione vel inventore labore commodi modi quos culpa aut saepe!
+            Alias!
+            </p>
+            <a href="#" target="_blank" class="project-link">Check it Out</a>
+        </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+  
+<div class="socials">
+    <a href="#" target="_blank"
+      ><img
+        src="assets/icons/icons8-twitter-circled.gif"
+        alt="Twitter"
+        loading="lazy"
+        class="socicon"
+    /></a>
+    <a href="https://www.instagram.com/ahmed_oranos/" target="_blank"
+      ><img
+        src="assets/icons/icons8-instagram.gif"
+        alt="Instagram"
+        loading="lazy"
+        class="socicon"
+    /></a>
+    <a href="#" target="_blank"
+      ><img
+        src="assets/icons/icons8-linkedin-circled.gif"
+        alt="Linkedin"
+        loading="lazy"
+        class="socicon"
+    />
+    </a>
+    <a href="https://www.linkedin.com/in/ahmed-elsherif-275357120/" target="_blank"
+      ><img src="assets/icons/icons8-github.gif" alt="Github" class="socicon"
+    />
+    </a>
+  </div>
+
+
+            
+        </div>
+      </div>
+      <script>
+        function parallax_height() {
+            var scroll_top = $(this).scrollTop();
+            var sample_section_top = $(".sample-section").offset().top;
+            var header_height = $(".sample-header-section").outerHeight();
+            $(".sample-section").css({ "margin-top": header_height });
+            $(".sample-header").css({ height: header_height - scroll_top });
+            }
+            parallax_height();
+            $(window).scroll(function() {
+            parallax_height();
+            });
+            $(window).resize(function() {
+            parallax_height();
+            });
+      </script>
+</body>
+</html>
